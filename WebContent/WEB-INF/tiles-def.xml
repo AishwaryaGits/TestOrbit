@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<!-- <tiles-definitions>
+    <definition name="anonymous.def" template="/WEB-INF/jsp/general/template/anonymous_layout.jsp">
+        <put-attribute name="title"  value="" />
+        <put-attribute name="header" value="/WEB-INF/jsp/general/include/anonymous/header.jsp" />
+        <put-attribute name="menu"   value="/WEB-INF/jsp/general/include/anonymous/menu.jsp" />
+        <put-attribute name="body"   value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/general/include/anonymous/footer.jsp" />
+    </definition>
+
+    <definition name="auth.unsecure.def" template="/WEB-INF/jsp/general/template/authenticated_unsecure_layout.jsp">
+        <put-attribute name="title"  value="" />
+        <put-attribute name="header" value="/WEB-INF/jsp/general/include/authenticated/unsecured/header.jsp" />
+        <put-attribute name="menu"   value="/WEB-INF/jsp/general/include/authenticated/unsecured/menu.jsp" />
+        <put-attribute name="body"   value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/general/include/authenticated/unsecured/footer.jsp" />
+    </definition>
+
+    <definition name="auth.secure.def" template="/WEB-INF/jsp/general/template/authenticated_secure_layout.jsp">
+        <put-attribute name="title"  value="" />
+        <put-attribute name="header" value="/WEB-INF/jsp/general/include/authenticated/secured/header.jsp" />
+        <put-attribute name="resources-1" value=""/>
+        <put-attribute name="resources-2" value=""/>
+        <put-attribute name="resources-3" value=""/>
+        <put-attribute name="resources-4" value=""/>
+        <put-attribute name="menu"   value="/WEB-INF/jsp/general/include/authenticated/secured/menu.jsp" />
+        <put-attribute name="body"   value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/general/include/authenticated/secured/footer.jsp" />
+    </definition>
+    
+    
+    <definition name="edit.popup.def" template="/WEB-INF/jsp/general/template/edit_popup_layout.jsp">
+        <put-attribute name="title"  value="" />
+        <put-attribute name="resources-1" value=""/>
+        <put-attribute name="body"   value="" />
+    </definition>
+
+    
+    <definition name="jmesa.table.def" template="/WEB-INF/jsp/general/template/jmesa_table_layout.jsp">
+        <put-attribute name="resources-1" value=""/>
+        <put-attribute name="title"  value="" />
+        <put-attribute name="body"   value="" />
+    </definition>
+
+        
+    
+    
+    <definition name="empty.def" template="/WEB-INF/jsp/general/template/empty_layout.jsp">
+        <put-attribute name="body"   value="" />
+    </definition>
+    
+    
+    <definition name="blank.def" template="/WEB-INF/jsp/general/template/blank_layout.jsp">
+        <put-attribute name="body"   value="" />
+    </definition>
+    
+    <definition name="json.def" template="/WEB-INF/jsp/general/template/json_layout.jsp">
+        <put-attribute name="body"   value="" />
+    </definition>
+
+    
+    
+    
+    
+    
+    <definition name="test.definition"
+        template="/WEB-INF/jsp/test/template/layout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/jsp/test/include/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/test/include/menu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/test/include/footer.jsp" />
+    </definition>
+
+    <definition name="public.definition"
+        template="/WEB-INF/jsp/test/template/publicLayout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/jsp/test/include/publicHeader.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/test/include/footer.jsp" />
+    </definition>
+    
+    <definition name="auth.free.def" template="/WEB-INF/jsp/general/template/authenticated_free_layout.jsp">
+        <put-attribute name="title"  value="" />
+        <put-attribute name="header" value="/WEB-INF/jsp/general/include/authenticated/free/header.jsp" />
+        <put-attribute name="resources-1" value=""/>
+        <put-attribute name="resources-2" value=""/>
+        <put-attribute name="resources-3" value=""/>
+        <put-attribute name="resources-4" value=""/>
+        <put-attribute name="body"   value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/general/include/authenticated/free/footer.jsp" />
+    </definition>
+
+    <definition name="message.def" template="/WEB-INF/jsp/general/template/message_layout.jsp">
+        <put-attribute name="body"   value="" />
+    </definition>
+    
+</tiles-definitions> -->

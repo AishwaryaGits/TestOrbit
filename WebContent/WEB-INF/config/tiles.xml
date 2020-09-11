@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+		<!-- Test pages for Project Manager starts-->
+		<definition name="base-projManager.definition"  
+        template="/WEB-INF/jsp/projectManager/layout.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/jsp/projectManager/header.jsp" />  
+        <put-attribute name="menu" value="/WEB-INF/jsp/projectManager/menu.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/jsp/projectManager/footer.jsp" />  
+    </definition> 
+    
+    <definition name="testorbit.managerDashBoard.view" extends="base-projManager.definition">
+		<put-attribute name="title" value="testorbit" />
+		<put-attribute name="body" value="/WEB-INF/jsp/projectManager/dashboard.jsp" />
+	</definition>
+	
+	<definition name="testorbit.loginManager.success" extends="base-unauth.definition">
+		<put-attribute name="title" value="testorbit" />
+		<put-attribute name="body" value="/WEB-INF/jsp/projectManager/resisterSuccess.jsp" />
+	</definition>
+	
+	<definition name="testorbit.login.success" extends="base-unauth.definition">
+		<put-attribute name="title" value="testorbit" />
+		<put-attribute name="body" value="/WEB-INF/jsp/tester/resisterSuccess.jsp" />
+	</definition>
+	
+	<definition name="testorbit.login.error" extends="base-unauth.definition">
+		<put-attribute name="title" value="testorbit" />
+		<put-attribute name="body" value="/WEB-INF/jsp/projectManager/errorpage.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="testorbit.moduleCreate.view" extends="base-projManager.definition">
+		<put-attribute name="title" value="testorbit" />
+		<put-attribute name="body" value="/WEB-INF/jsp/projectManager/moduleCreate.jsp" />
+	</definition>
+	
+	<definition name="testorbit.approveCreate.view" extends="base-projManager.definition">
+		<put-attribute name="title" value="testorbit" />
+		<put-attribute name="body" value="/WEB-INF/jsp/projectManager/approveUsers.jsp" />
+	</definition>
+	
+	<definition name="testorbit.assignTesters.view" extends="base-projManager.definition">
+		<put-attribute name="title" value="testorbit" />
+		<put-attribute name="body" value="/WEB-INF/jsp/projectManager/assignTesters.jsp" />
+	</definition>
+    
+    <!-- Test pages for Project Manager end-->
+    
+    <!-- Test pages for Test Manager starts-->
+		<definition name="base-testManager.definition"  
+        template="/WEB-INF/jsp/testManager/layout.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/jsp/testManager/header.jsp" />  
+        <put-attribute name="menu" value="/WEB-INF/jsp/testManager/menu.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/jsp/testManager/footer.jsp" />  
+    </definition> 
+    
+    <definition name="testorbit.testManagerDashBoard.view" extends="base-testManager.definition">
+		<put-attribute name="title" value="testorbit" />
+		<put-attribute name="body" value="/WEB-INF/jsp/testManager/dashboard.jsp" />
+	</definition>
+	
+	<definition name="testorbit.taskCreate.view" extends="base-testManager.definition">
+		<put-attribute name="title" value="testorbit" />
+		<put-attribute name="body" value="/WEB-INF/jsp/testManager/taskCreate.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="testorbit.approveTestCases.view" extends="base-testManager.definition">
+		<put-attribute name="title" value="testorbit" />
+		<put-attribute name="body" value="/WEB-INF/jsp/testManager/approveTestCases.jsp" />
+	</definition>
+      <!-- Test pages for Test Manager ends-->
+      
+       <!-- Test pages for Tester starts-->
+		<definition name="base-tester.definition"  
+        template="/WEB-INF/jsp/tester/layout.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/jsp/tester/header.jsp" />  
+        <put-attribute name="menu" value="/WEB-INF/jsp/tester/menu.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/jsp/tester/footer.jsp" />  
+    </definition> 
+    
+    <definition name="testorbit.testerDashBoard.view" extends="base-tester.definition">
+		<put-attribute name="title" value="testorbit" />
+		<put-attribute name="body" value="/WEB-INF/jsp/tester/dashboard.jsp" />
+	</definition>
+	
+	<definition name="testorbit.testCaseCreate.view" extends="base-tester.definition">
+		<put-attribute name="title" value="testorbit" />
+		<put-attribute name="body" value="/WEB-INF/jsp/tester/testCaseCreate.jsp" />
+	</definition>
+      <!-- Test pages for Tester ends-->
+      
+    <!-- Test pages starts for Login registration start-->
+    <definition 
+    	name="base-unauth.definition"  
+        template="/WEB-INF/jsp/unauth-login/unauth-layout.jsp">  
+	    <put-attribute name="title" value="" />  
+	    <put-attribute name="header" value="/WEB-INF/jsp/unauth-login/header.jsp" />
+	    <put-attribute name="body" value="" />  
+    </definition>
+	
+
+	
+	 <definition name="testorbit.login.view" extends="base-unauth.definition">
+		<put-attribute name="title" value="testorbit" />
+		<put-attribute name="body" value="/WEB-INF/jsp/unauth-login/loginPage.jsp" />
+	</definition> 
+	
+	<definition name="testorbit.registration.view" extends="base-unauth.definition">
+		<put-attribute name="title" value="testorbit" />
+		<put-attribute name="body" value="/WEB-INF/jsp/unauth-login/registration.jsp" />
+	</definition>
+	
+	 <!-- Test pages starts for Login registration end-->
+	 
+	<definition name="testorbit.test.add" >
+		<put-attribute name="title" value="testorbit" />
+		<put-attribute name="body" value="/WEB-INF/jsp/testorbit/test/add.jsp" />
+	</definition>
+	
+
+	
+	
+</tiles-definitions>

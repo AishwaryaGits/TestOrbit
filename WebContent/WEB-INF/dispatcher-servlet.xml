@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+        <!-- hibernate settings start -->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="locations">
+                    <list>
+                            <value>/WEB-INF/db-config.properties</value>
+                    </list>
+            </property>
+	</bean>
+ <mvc:annotation-driven/>
+
+	<context:component-scan base-package="com.testorbit.mainsorbit.*" />
+<!--        <import resource="config/fonts.xml" />  -->
+        <import resource="db-config.xml" />
+        
+        <!-- hibernate settings ends -->
+
+        <!-- DAO starts -->
+        <import resource="config/data-access-layer.xml" />  
+        <!-- DAO ends -->
+
+        <!-- Service starts -->
+        <import resource="config/services.xml" />
+        <!-- Service ends -->
+        
+        
+        <!-- Controller starts -->
+        <import resource="config/controller.xml" />  
+     
+        <!-- Controller ends -->
+
+    <!--Tile Configuration starts-->
+   <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass">
+            <value>
+                org.springframework.web.servlet.view.tiles2.TilesView
+            </value>
+        </property>
+    </bean>
+    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+        <property name="definitions">
+            <list>
+               
+                <value>/WEB-INF/config/tiles.xml</value>
+            </list>
+        </property>
+    </bean>
+   
+<bean class="org.springframework.context.support.ReloadableResourceBundleMessageSource" id="messageSource"
+    p:basenames="WEB-INF/classes/i18n/" p:fallbackToSystemLocale="false" p:fileEncodings="UTF-8"
+    p:defaultEncoding="UTF-8" />
+
+<!-- store preferred language configuration in a cookie -->
+<bean class="org.springframework.web.servlet.i18n.CookieLocaleResolver" id="localeResolver" p:cookieName="locale" />
+
+
+<mvc:interceptors>
+    <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" p:paramName="lang"  />
+</mvc:interceptors>
+
+
+
+
+</beans>
